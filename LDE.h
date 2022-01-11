@@ -8,8 +8,8 @@ class LDENode //no elementar para uma lista duplamente encadeada
 {
 public:
 	T val; //valor armazenado;
-	LDENode* nxt; //ponteiro para o proximo elemento;
-	LDENode* prv; //ponteiro para o elemento anterior;
+	LDENode<T>* nxt; //ponteiro para o proximo elemento;
+	LDENode<T>* prv; //ponteiro para o elemento anterior;
 	LDENode(T x){
 		val = x;
 		nxt = prv = NULL;
@@ -49,7 +49,7 @@ LDE<T>::LDE(){
 
 template <class T>
 void LDE<T>::push(T x){
-	LDENode<T>* u = new LDENode(x);
+	LDENode<T>* u = new LDENode<T>(x);
 	if(leng == 0)
 		tail = u;
 	else{
@@ -62,7 +62,7 @@ void LDE<T>::push(T x){
 
 template <class T>
 void LDE<T>::push_back(T x){
-	LDENode<T>* u = new LDENode(x);
+	LDENode<T>* u = new LDENode<T>(x);
 	if(leng == 0)
 		head = u;
 	else{
