@@ -16,6 +16,7 @@ protected:
 public:
 	arrayQueue() : arrayList<T>(){}; //inicializa igual a arrayList
 	arrayQueue(int t) : arrayList<T>(t){}; //inicializa igual a arrayList
+	~arrayQueue(){delete [] vet;}
 	T get(int); //retorna o elemento na posicao dada da fila (sendo 0 a primeira posicao). Se nao existir determinada posicao, retorna (T)NULL;
 	T set(int,T); //altera o elemento na posicao dada da fila (sendo 0 a primeira posicao) e retorna o antigo valor armazenado na mesma. Se nao existir determinada posicao, retorna (T)NULL;
 	void add(T); //adiciona um elemento no fim da fila;
