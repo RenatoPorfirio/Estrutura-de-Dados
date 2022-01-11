@@ -13,6 +13,7 @@ protected:
 public:
 	arrayList(); //constroi uma arrayList com maxleng = 1
 	arrayList(int); //constroi uma arrayList com um maxleng passado como parametro
+	~arrayList(){delete [] vet;}
 	int size(){return leng;}
 	int max_size(){return maxleng;}
 	T get(int); //retorna o i-esimo elemento da lista (se i > maxleng, retorna um NULL do tipo T. Exemplo: no caso de uma string, retornaria uma string vazia;
