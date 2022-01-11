@@ -15,6 +15,7 @@ protected:
 public:
 	arrayStack() : arrayList<T>(){} //igual ao da arrayList
 	arrayStack(int t) : arrayList<T>(t){} //igual ao da arrayList
+	~arrayStack(){delete [] vet;}
 	void push(T); //adiciona um elemento na pilha. O elemento sempre sera adicionado no fim do array;
 	T pop(); //remove o ultimo elemento adicionado e o retorna;
 	using arrayList<T>::get;
