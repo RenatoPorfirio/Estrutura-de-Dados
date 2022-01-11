@@ -1,7 +1,7 @@
 ﻿#ifndef ARRAYQUEUE_H
 #define ARRAYQUEUE_H
 
-#import "arrayList.h"
+#include "arrayList.h"
 using std::cout;
 
 template <class T>
