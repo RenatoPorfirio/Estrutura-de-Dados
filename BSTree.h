@@ -13,12 +13,10 @@ protected:
 	int tam;
 public:
 	BSTree() : BTree<T>(){tam = 0;}
+	~BSTree(){BTree<T>::clear(root);}
 	int size(){return tam;}
 	BTNode<T>* getNode(T x){return aux_getNode(root,x);}
-	bool find(T x){
-		if(getNode(x) == NULL) return false;
-		return true;
-	}
+	bool find(T x){return (getNode(x) == NULL) ? false : true;}
 	bool add(T x){return aux_add(root,x);}
 	bool remove(T);
 	using BTree<T>::bftraverse;
