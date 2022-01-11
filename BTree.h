@@ -12,15 +12,15 @@ class BTNode //No elementar para a BTree
 {
 public:
 	T key; //chave armazenada;
-	BTNode* parent; //ponteiro para o no pai;
-	BTNode* left; //ponteiro para o no a esquerda;
-	BTNode* right; //ponteiro para o no a direita;
+	BTNode<T>* parent; //ponteiro para o no pai;
+	BTNode<T>* left; //ponteiro para o no a esquerda;
+	BTNode<T>* right; //ponteiro para o no a direita;
 	BTNode(T x){
 		key = x;
 		parent = left = right = NULL;
 	}
-	BTNode* set_leftChild(BTNode<T>*); //adiciona um no filho passado como parametro a esquerda;
-	BTNode* set_rightChild(BTNode<T>*); //adiciona um no filho passado como parametro a direita;
+	BTNode<T>* set_leftChild(BTNode<T>*); //adiciona um no filho passado como parametro a esquerda;
+	BTNode<T>* set_rightChild(BTNode<T>*); //adiciona um no filho passado como parametro a direita;
 };
 
 template <class T> 
