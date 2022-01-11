@@ -37,7 +37,7 @@ BTNode<T>* BSTree<T>::aux_getNode(BTNode<T>* u, T x){
 template <class T>
 bool BSTree<T>::aux_add(BTNode<T>* u, T x){
 	if(root == NULL){
-		root = new BTNode(x);
+		root = new BTNode<T>(x);
 		tam++;
 		return true;
 	}
