@@ -35,6 +35,7 @@ protected:
 	BTNode<T>* root; //no para a raiz;
 public:
 	BTree(){root = NULL;}
+	~BTree(){clear(root);}
 	int size(BTNode<T>*); //determina o tamanho de uma subarvore dado o no raiz;
 	BTNode<T>* getRoot(){return root;} //retorna um ponteiro para a raiz da arvore;
 	void setRoot(BTNode<T>* u){root = u;} //modifica o no raiz da arvore, modificando tambem sua estrutura;
